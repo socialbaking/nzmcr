@@ -9,6 +9,7 @@ interface DataType {
     profession: string;
     name: string;
     imgSrc: string;
+    imglogo: string;
 }
 
 const postData: DataType[] = [
@@ -16,46 +17,55 @@ const postData: DataType[] = [
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
     {
         profession: 'Zour Apples',
         name: 'Medleaf',
         imgSrc: '/images/wework/strain-23.png.webp',
+        imglogo: 'images/wework/medleaf-logo.svg',
     },
 ]
 
@@ -127,10 +137,11 @@ export default class MultipleItems extends Component {
                             <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
                                 <div className='relative'>
                                     <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
-                                    <Image src={'/images/wework/linkedin.svg'} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
+                                    <Image src={items.imglogo} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
                                 </div>
                                 <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
                                 <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
+                                
                             </div>
                         </div>
                     ))}
