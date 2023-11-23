@@ -19,11 +19,8 @@ export default function Home() {
     <main>
       <Banner />
       <Wework />
-      {/* <Featured /> */}
       <FAQ />
-     {/* <Testimonials /> */}
-      <Articles /> 
-      <Insta /> 
+      <Aboutus />
     </main>
   )
 }
