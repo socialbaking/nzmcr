@@ -2,77 +2,9 @@
 import Slider from "react-slick";
 import React, { Component } from "react";
 import Image from "next/image";
+import {ProductInfo} from "@/app/karma";
 
-// CAROUSEL DATA
-
-interface DataType {
-    profession: string;
-    name: string;
-    imgSrc: string;
-    imglogo: string;
-}
-
-const postData: DataType[] = [
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-    {
-        profession: 'Zour Apples',
-        name: 'Medleaf',
-        imgSrc: '/images/wework/strain-23.png.webp',
-        imglogo: 'images/wework/medleaf-logo.svg',
-    },
-]
-
-// CAROUSEL SETTINGS
-
-
-export default class MultipleItems extends Component {
+export default class MultipleItems extends Component<{ products: ProductInfo[] }> {
 
     render() {
         const settings = {
@@ -132,16 +64,15 @@ export default class MultipleItems extends Component {
                 </div>
 
                 <Slider {...settings}>
-                    {postData.map((items, i) => (
+                    {this.props.products.map((items, i) => (
                         <div key={i}>
                             <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
                                 <div className='relative'>
-                                    <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
-                                    <Image src={items.imglogo} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
+                                    <Image src={items.productImage} alt="gaby" width={182} height={182} className="inline-block m-auto object-center object-cover" style={{ height: 150, width: 150 }} />
+                                    <Image src={items.organisationImage} alt="greenbg" width={120} height={120} className=" absolute inline-block position-linkedin" />
                                 </div>
-                                <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
-                                <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
-                                
+                                <h4 className='text-4xl font-bold pt-14'>{items.organisationName}</h4>
+                                <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.productName}</h3>
                             </div>
                         </div>
                     ))}

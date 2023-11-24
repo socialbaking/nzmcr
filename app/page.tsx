@@ -12,13 +12,15 @@ import Testimonials from './components/Testimonials/index';
 import Articles from './components/Articles/index';
 import Joinus from './components/Joinus/index';
 import Insta from './components/Insta/index';
+import {listProductInfo} from "@/app/karma";
 
 
-export default function Home() {
+export default async function Home() {
+  const products = await listProductInfo();
   return (
     <main>
       <Banner />
-      <Wework />
+      <Wework products={products} />
       <FAQ />
       <Aboutus />
     </main>
