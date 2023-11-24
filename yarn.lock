@@ -2909,10 +2909,10 @@
     "@smithy/types" "^2.6.0"
     tslib "^2.5.0"
 
-"@socialbaking/karma@^1.0.0-beta.122":
-  version "1.0.0-beta.122"
-  resolved "https://registry.yarnpkg.com/@socialbaking/karma/-/karma-1.0.0-beta.122.tgz#eeb40c2331c4f92c0bfa422191e8d45d5e73994f"
-  integrity sha512-QciJuhBlYizH2zU3d/T+sivKVTI8QhLy1CS9lMeazMCtlt22ErUtZ5W+9Mh8xCjxzyG8pYc4wfNdviYCAqoqPw==
+"@socialbaking/karma@^1.0.0-beta.123":
+  version "1.0.0-beta.123"
+  resolved "https://registry.yarnpkg.com/@socialbaking/karma/-/karma-1.0.0-beta.123.tgz#f87f9ab4cd9deeb87d44fcf6df8dbe1f738969c3"
+  integrity sha512-5wiBJO7UsP6ydNgs47T96scQ5P7aZDjszy/g50bc4WCTnpX2c8EEEXzXqmmLrgqZOb+X1Gpt4Xr2uqxUKy8jug==
   dependencies:
     "@authsignal/browser" "^0.1.7"
     "@authsignal/node" "^0.0.40"
